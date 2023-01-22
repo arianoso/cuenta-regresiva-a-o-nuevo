@@ -1,0 +1,105 @@
+@import url('https://fonts.cdnfonts.com/css/digital-numbers');
+@import url('https://fonts.cdnfonts.com/css/open-sans');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .8s;
+}
+
+.content {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: slategray;
+}
+
+h1 {
+	color: yellow;
+	font-size: 72px;
+}
+
+#end-of-year{
+    padding: 8px;
+    border: solid 10px rgb(50, 50, 50);
+    border-radius: 35px;
+
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 5);
+}.flipboard {
+	display: inline-block;
+	margin: 5px 5px 40px 60px;
+	border-width: 1px 0 1px 0;
+}
+
+.layer {
+	border-width: 0 0 1px 0;
+	width: 92px;
+}
+
+.flip {
+    font-family: 'Digital Numbers', sans-serif;                                    
+    font-size: 50px;
+    color: rgb(255, 125, 125);
+    text-shadow: 0 0 10px red;
+
+    text-align: end;
+    position: relative;
+    display: inline-block;
+    min-width: 80px;
+    height: 90px;
+    padding-bottom: 10px;
+}
+
+.flip-next p::after{
+    content: '88';
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.1);
+    text-shadow: none;
+}
+
+#days .flip-next p::before{
+    content: 'DAYS';
+}
+
+#hours .flip-next p::before{
+    content: 'HOURS';
+}
+
+#minutes .flip-next p::before{
+    content: 'MINS';
+}
+
+#seconds .flip-next p::before{
+    content: 'SECS';
+}
+
+#years .flip-next p::before{
+    content: 'YEARS';
+}
+
+.flip-next p::before{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: darkgray;
+    text-shadow: none;
+}
+
+/* Scroll */
+body::-webkit-scrollbar{
+    width: 0px;
+  
+  }
+  
+  body::-webkit-scrollbar-thumb{
+    background: transparent;
+  border-radius: 0px;
+  }
